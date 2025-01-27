@@ -85,7 +85,7 @@ function loadMarketplace(marketplace) {
         marketplaceItem.className = "marketplace-item";
         marketplaceItem.innerHTML = `
             <div class="item-details">
-                <img src="assets/${item.Icon}" alt="${item.Item}" class="item-icon">
+                <img src="assets/${item.Icon}" alt="${item.Item}" class="item-icon" style="width: 25px; height: 25px;">
                 <div>${item.Item}</div>
             </div>
             <div class="item-actions">
