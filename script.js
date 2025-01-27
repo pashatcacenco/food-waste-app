@@ -81,9 +81,19 @@ function loadRecommendations(recommendations) {
 function loadMarketplace(marketplace) {
     const list = document.getElementById("marketplaceList");
     marketplace.forEach(item => {
-        const li = document.createElement("li");
-        li.textContent = `${item.Item} (${item.Status}) - Quantity: ${item.Quantity} - Owner: ${item.Owner}`;
-        list.appendChild(li);
+        const marketplaceItem = document.createElement("div");
+        marketplaceItem.className = "marketplace-item";
+        marketplaceItem.innerHTML = `
+            <div class="item-details">
+                <img src="assets/${item.Icon}" alt="${item.Item}" class="item-icon">
+                <div>${item.Item}</div>
+            </div>
+            <div class="item-actions">
+                <button class="bg-green-500 text-white px-4 py-2 rounded">Trade</button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded">Request</button>
+            </div>
+        `;
+        list.appendChild(marketplaceItem);
     });
 }
 
