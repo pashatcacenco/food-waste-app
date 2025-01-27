@@ -12,11 +12,35 @@
         { "Recipe": "Omelette", "Ingredients": "Eggs, Cheese, Ham", "Instructions": "Fry eggs with ham and cheese" }
     ],
     "Marketplace": [
-        { "Item": "Bread", "Status": "Available", "Quantity": 3, "Owner": "John" },
-        { "Item": "Bananas", "Status": "Requested", "Quantity": 5, "Owner": "Mary" },
-        { "Item": "Rice", "Status": "Available", "Quantity": 2, "Owner": "Anna" },
-        { "Item": "Tomatoes", "Status": "Requested", "Quantity": 8, "Owner": "Mark" }
-    ],
+        {
+          "Item": "Bread",
+          "Icon": "bread-icon.png",
+          "Status": "Available",
+          "Quantity": 3,
+          "Owner": "John"
+        },
+        {
+          "Item": "Bananas",
+          "Icon": "bananas-item.png",
+          "Status": "Requested",
+          "Quantity": 5,
+          "Owner": "Mary"
+        },
+        {
+          "Item": "Rice",
+          "Icon": "rice-icon.png",
+          "Status": "Available",
+          "Quantity": 2,
+          "Owner": "Anna"
+        },
+        {
+          "Item": "Tomatoes",
+          "Icon": "tomatoes-item.png",
+          "Status": "Requested",
+          "Quantity": 8,
+          "Owner": "Mark"
+        }
+      ],
     "Notifications": [
         { "Notification": "Milk is expired." },
         { "Notification": "Chicken will expire soon." },
