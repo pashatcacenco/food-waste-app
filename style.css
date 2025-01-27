@@ -1,1 +1,56 @@
+/* General Styling */
+body {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+.login-logo {
+    width: 25%;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Marketplace Styling */
+.marketplace-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+}
+
+.item-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.item-actions button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.item-actions .bg-green-500 {
+    background-color: #38a169;
+    color: #fff;
+}
+
+.item-actions .bg-blue-500 {
+    background-color: #3182ce;
+    color: #fff;
+}
 
