@@ -1,0 +1,38 @@
+{
+    "Fridge": [
+        { "Product": "Milk", "StartDate": "01.01.2025", "ExpireDate": "10.01.2025", "Status": "Expired" },
+        { "Product": "Eggs", "StartDate": "07.01.2025", "ExpireDate": "10.02.2025", "Status": "Fresh" },
+        { "Product": "Potato", "StartDate": "15.01.2025", "ExpireDate": "20.02.2025", "Status": "Fresh" },
+        { "Product": "Chicken", "StartDate": "11.01.2025", "ExpireDate": "27.01.2025", "Status": "Expired Soon" }
+    ],
+    "Recommendations": [
+        { "Recipe": "Chicken Soup", "Ingredients": "Chicken, Carrots, Onion", "Instructions": "Boil chicken and veggies" },
+        { "Recipe": "Cesar Salad", "Ingredients": "Lettuce, Cheese, Dressing", "Instructions": "Mix lettuce with dressing" },
+        { "Recipe": "Potato Mash", "Ingredients": "Potatoes, Butter, Milk", "Instructions": "Mash boiled potatoes with butter" },
+        { "Recipe": "Omelette", "Ingredients": "Eggs, Cheese, Ham", "Instructions": "Fry eggs with ham and cheese" }
+    ],
+    "Marketplace": [
+        { "Item": "Bread", "Status": "Available", "Quantity": 3, "Owner": "John" },
+        { "Item": "Bananas", "Status": "Requested", "Quantity": 5, "Owner": "Mary" },
+        { "Item": "Rice", "Status": "Available", "Quantity": 2, "Owner": "Anna" },
+        { "Item": "Tomatoes", "Status": "Requested", "Quantity": 8, "Owner": "Mark" }
+    ],
+    "Notifications": [
+        { "Notification": "Milk is expired." },
+        { "Notification": "Chicken will expire soon." },
+        { "Notification": "Add more eggs to your fridge." },
+        { "Notification": "Potatoes are fresh and ready to use." }
+    ],
+    "Instructions": [
+        { "Step": "Login", "Description": "Enter your credentials to access the app." },
+        { "Step": "Add Items", "Description": "Add items to your fridge to track expiration dates." },
+        { "Step": "View Recommendations", "Description": "Get recipe suggestions based on your fridge contents." },
+        { "Step": "Use Marketplace", "Description": "Trade or request items within your community." }
+    ],
+    "Scanner": [
+        { "Barcode": "123456789", "Product": "Milk", "Status": "Scanned Successfully" },
+        { "Barcode": "987654321", "Product": "Eggs", "Status": "Scanned Successfully" },
+        { "Barcode": "456123789", "Product": "Chicken", "Status": "Error" },
+        { "Barcode": "789456123", "Product": "Potatoes", "Status": "Scanned Successfully" }
+    ]
+}
