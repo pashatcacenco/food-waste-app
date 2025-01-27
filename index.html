@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Prototype</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <style>
         .login-logo {
@@ -81,12 +82,42 @@
         </ul>
     </div>
 
+<!-- Marketplace Page -->
     <div id="marketplace" class="hidden p-4">
         <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
         <h2 class="text-xl font-bold mb-4">Community Marketplace</h2>
-        <ul id="marketplaceList" class="list-disc pl-5">
-            <!-- Data will be populated dynamically -->
-        </ul>
+        <div id="marketplaceList">
+            <div class="marketplace-item">
+                <div class="item-details">
+                    <img src="bread-icon.png" alt="Bread" class="item-icon">
+                    <div>Bread</div>
+                </div>
+                <div class="item-actions">
+                    <button class="bg-green-500 text-white px-4 py-2 rounded">Trade</button>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Request</button>
+                </div>
+            </div>
+            <div class="marketplace-item">
+                <div class="item-details">
+                    <img src="milk-icon.png" alt="Milk" class="item-icon">
+                    <div>Milk</div>
+                </div>
+                <div class="item-actions">
+                    <button class="bg-green-500 text-white px-4 py-2 rounded">Trade</button>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Request</button>
+                </div>
+            </div>
+            <div class="marketplace-item">
+                <div class="item-details">
+                    <img src="eggs-icon.png" alt="Eggs" class="item-icon">
+                    <div>Eggs</div>
+                </div>
+                <div class="item-actions">
+                    <button class="bg-green-500 text-white px-4 py-2 rounded">Trade</button>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded">Request</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="notifications" class="hidden p-4">
