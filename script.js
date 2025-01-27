@@ -40,14 +40,33 @@ function loadFridgeData(fridge) {
     const tableBody = document.getElementById("fridgeTable");
     fridge.forEach(item => {
         const tr = document.createElement("tr");
+        const statusColor = getStatusColor(item.Status);
         tr.innerHTML = `
             <td class="border px-4 py-2">${item.Product}</td>
             <td class="border px-4 py-2">${item.StartDate}</td>
             <td class="border px-4 py-2">${item.ExpireDate}</td>
-            <td class="border px-4 py-2">${item.Status}</td>
+            <td class="border px-4 py-2">
+                <span class="flex items-center">
+                    <span class="w-3 h-3 rounded-full mr-2" style="background-color: ${statusColor}"></span>
+                    ${item.Status}
+                </span>
+            </td>
         `;
         tableBody.appendChild(tr);
     });
+}
+
+function getStatusColor(status) {
+    switch (status) {
+        case "Expired":
+            return "red";
+        case "Fresh":
+            return "green";
+        case "Expired Soon":
+            return "orange";
+        default:
+            return "gray";
+    }
 }
 
 function loadRecommendations(recommendations) {
