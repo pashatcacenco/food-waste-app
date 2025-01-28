@@ -40,14 +40,35 @@ body {
 
 
 
+/* Make the table responsive */
 .table-container {
-    overflow-x: auto; /* Allow horizontal scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+    overflow-x: hidden; /* Ensure no horizontal scroll */
 }
 
 table {
-    min-width: 600px; /* Set a minimum width for the table */
-    border-collapse: collapse; /* Ensure the table doesn't exceed its container */
+    width: 100%; /* Ensure the table fits the container */
+    border-collapse: collapse; /* Avoid extra spacing between table cells */
+}
+
+th, td {
+    padding: 8px; /* Reduce padding */
+    text-align: left; /* Align text to the left */
+    font-size: 14px; /* Adjust font size for smaller screens */
+    word-wrap: break-word; /* Allow text to wrap if it's too long */
+}
+
+/* Squeeze columns proportionally */
+th, td:nth-child(1) { width: 25%; } /* Product */
+th, td:nth-child(2) { width: 25%; } /* Start Date */
+th, td:nth-child(3) { width: 25%; } /* Expire Date */
+th, td:nth-child(4) { width: 25%; } /* Status */
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    th, td {
+        font-size: 12px; /* Reduce font size further */
+        padding: 6px; /* Minimize padding */
+    }
 }
 
 .login-logo {
