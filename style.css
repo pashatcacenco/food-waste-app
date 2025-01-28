@@ -39,40 +39,7 @@ body {
 }
 
 
-To make the table responsive and fit within the display size if the display is smaller than the table width, you can use CSS to allow horizontal scrolling and responsive behavior.
 
-Updated HTML
-Add a div wrapper with a class for scrolling.
-
-html
-Copy
-Edit
-<div id="fridge" class="hidden p-4">
-    <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
-    <h2 class="text-xl font-bold mb-4">Your Fridge</h2>
-    <div class="table-container overflow-x-auto">
-        <table class="table-auto w-full bg-white rounded-lg shadow">
-            <thead>
-                <tr>
-                    <th class="px-4 py-2">Product</th>
-                    <th class="px-4 py-2">Start Date</th>
-                    <th class="px-4 py-2">Expire Date</th>
-                    <th class="px-4 py-2">Status</th>
-                </tr>
-            </thead>
-            <tbody id="fridgeTable">
-                <!-- Data will be populated dynamically -->
-            </tbody>
-        </table>
-    </div>
-</div>
-Updated CSS
-Add styles to make the table container scrollable on smaller screens.
-
-css
-Copy
-Edit
-/* Enable horizontal scrolling for the table on smaller screens */
 .table-container {
     overflow-x: auto; /* Allow horizontal scrolling */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
