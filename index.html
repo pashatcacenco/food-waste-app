@@ -3,119 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Prototype</title>
+    <title>WasteLess App</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <style>
-        .login-logo {
-            width: 25%;
-            margin: 0 auto;
-            display: block;
-        }
-        body {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-    </style>
 </head>
-<body class="bg-gray-100">
+<body>
+    <!-- Phone Border -->
     <div id="phone-border">
+        <!-- App Content -->
         <div id="app-content">
-    <!-- Login Page -->
-    <div id="login" class="p-4">
-        <div class="flex justify-center mb-4">
-            <img src="assets/logo.png" alt="App Logo" class="login-logo">
-        </div>
-        <h1 class="text-2xl font-bold mb-4 text-center">WasteLess</h1>
-        <form onsubmit="handleLogin(event)" class="bg-white p-6 rounded-lg shadow-md max-w-sm mx-auto">
-            <div class="mb-4">
-                <label for="username" class="block text-gray-700">Username</label>
-                <input type="text" id="username" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" required>
+            <!-- Login Page -->
+            <div id="login" class="p-4">
+                <div class="flex justify-center mb-4">
+                    <img src="assets/logo.png" alt="App Logo" class="login-logo">
+                </div>
+                <h1 class="text-2xl font-bold mb-4 text-center">WasteLess</h1>
+                <form onsubmit="handleLogin(event)" class="bg-white p-6 rounded-lg shadow-md max-w-sm mx-auto">
+                    <div class="mb-4">
+                        <label for="username" class="block text-gray-700">Username</label>
+                        <input type="text" id="username" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="block text-gray-700">Password</label>
+                        <input type="password" id="password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" required>
+                    </div>
+                    <button type="submit" class="w-full bg-green-500 text-white py-2 rounded-lg">Sign In</button>
+                    <p class="text-sm text-center mt-4 text-gray-600">Forgot Password?</p>
+                </form>
             </div>
-            <div class="mb-4">
-                <label for="password" class="block text-gray-700">Password</label>
-                <input type="password" id="password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" required>
-            </div>
-            <button type="submit" class="w-full bg-green-500 text-white py-2 rounded-lg">Sign In</button>
-            <p class="text-sm text-center mt-4 text-gray-600">Forgot Password?</p>
-        </form>
-    </div>
 
-    <!-- Main Menu -->
-    <div id="menu" class="hidden p-4">
-        <h1 class="text-2xl font-bold mb-4">Main Menu</h1>
-        <div class="grid grid-cols-2 gap-4">
-            <button class="bg-green-500 text-white rounded-lg p-4" onclick="showPage('fridge')">Your Fridge</button>
-            <button class="bg-green-500 text-white rounded-lg p-4" onclick="showPage('recommendation')">Recommendation</button>
-            <button class="bg-green-500 text-white rounded-lg p-4" onclick="showPage('marketplace')">Marketplace</button>
-            <button class="bg-green-500 text-white rounded-lg p-4" onclick="showPage('notifications')">Notifications</button>
-            <button class="bg-green-500 text-white rounded-lg p-4" onclick="showPage('instructions')">Instructions</button>
-            <button class="bg-green-500 text-white rounded-lg p-4" onclick="showPage('scanner')">Scanner</button>
-            <button class="bg-red-500 text-white rounded-lg p-4" onclick="showPage('login')">Logout</button>
+            <!-- Main Menu -->
+            <div id="menu" class="hidden p-4">
+                <h1 class="text-2xl font-bold mb-4">Main Menu</h1>
+                <div class="grid grid-cols-2 gap-4">
+                    <button class="bg-green-500 text-white rounded-lg p-4" onclick="showPage('fridge')">Your Fridge</button>
+                    <button class="bg-green-500 text-white rounded-lg p-4" onclick="showPage('recommendation')">Recommendation</button>
+                    <button class="bg-green-500 text-white rounded-lg p-4" onclick="showPage('marketplace')">Marketplace</button>
+                    <button class="bg-green-500 text-white rounded-lg p-4" onclick="showPage('notifications')">Notifications</button>
+                    <button class="bg-green-500 text-white rounded-lg p-4" onclick="showPage('instructions')">Instructions</button>
+                    <button class="bg-green-500 text-white rounded-lg p-4" onclick="showPage('scanner')">Scanner</button>
+                    <button class="bg-red-500 text-white rounded-lg p-4" onclick="showPage('login')">Logout</button>
+                </div>
+            </div>
+
+            <!-- Fridge Page -->
+            <div id="fridge" class="hidden p-4">
+                <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
+                <h2 class="text-xl font-bold mb-4">Your Fridge</h2>
+                <div class="table-container">
+                    <table class="table-auto w-full bg-white rounded-lg shadow">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2">Product</th>
+                                <th class="px-4 py-2">Start Date</th>
+                                <th class="px-4 py-2">Expire Date</th>
+                                <th class="px-4 py-2">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="fridgeTable">
+                            <!-- Data will be populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Other Pages -->
+            <div id="recommendation" class="hidden p-4">
+                <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
+                <h2 class="text-xl font-bold mb-4">Recommendations</h2>
+                <ul id="recommendationList" class="list-disc pl-5">
+                    <!-- Data will be populated dynamically -->
+                </ul>
+            </div>
+
+            <div id="marketplace" class="hidden p-4">
+                <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
+                <h2 class="text-xl font-bold mb-4">Community Marketplace</h2>
+                <div id="marketplaceList">
+                    <!-- Data will be populated dynamically -->
+                </div>
+            </div>
+
+            <div id="notifications" class="hidden p-4">
+                <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
+                <h2 class="text-xl font-bold mb-4">Notifications</h2>
+                <ul id="notificationsList" class="list-disc pl-5">
+                    <!-- Data will be populated dynamically -->
+                </ul>
+            </div>
+
+            <div id="instructions" class="hidden p-4">
+                <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
+                <h2 class="text-xl font-bold mb-4">Instructions</h2>
+                <p>Here you can add instructions on how to use the app or features.</p>
+            </div>
+
+            <div id="scanner" class="hidden p-4 flex flex-col items-center justify-center">
+                <button class="text-green-500 underline mb-4 self-start" onclick="showPage('menu')">Back to Menu</button>
+                <h2 class="text-xl font-bold mb-4">Scanner</h2>
+                <img src="assets/scanner-logo.png" alt="Scanner Logo" class="mb-6" style="width: 150px; height: 150px;">
+                <button class="bg-green-500 text-white px-6 py-2 rounded-lg text-lg">Scan</button>
+            </div>
         </div>
     </div>
-
- <!-- Fridge Page -->
-<div id="fridge" class="hidden p-4">
-    <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
-    <h2 class="text-xl font-bold mb-4">Your Fridge</h2>
-    <div class="table-container">
-        <table class="table-auto w-full bg-white rounded-lg shadow">
-            <thead>
-                <tr>
-                    <th class="px-4 py-2">Product</th>
-                    <th class="px-4 py-2">Start Date</th>
-                    <th class="px-4 py-2">Expire Date</th>
-                    <th class="px-4 py-2">Status</th>
-                </tr>
-            </thead>
-            <tbody id="fridgeTable">
-                <!-- Data will be populated dynamically -->
-            </tbody>
-        </table>
-    </div>
-</div>
-
-    <!-- Other Pages -->
-    <div id="recommendation" class="hidden p-4">
-        <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
-        <h2 class="text-xl font-bold mb-4">Recommendations</h2>
-        <ul id="recommendationList" class="list-disc pl-5">
-            <!-- Data will be populated dynamically -->
-        </ul>
-    </div>
-
-   <!-- Marketplace Page -->
-   <div id="marketplace" class="hidden p-4">
-    <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
-    <h2 class="text-xl font-bold mb-4">Community Marketplace</h2>
-    <div id="marketplaceList">
-        <!-- Data will be populated dynamically -->
-    </div>
-</div>
-
-    <div id="notifications" class="hidden p-4">
-        <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
-        <h2 class="text-xl font-bold mb-4">Notifications</h2>
-        <ul id="notificationsList" class="list-disc pl-5">
-            <!-- Data will be populated dynamically -->
-        </ul>
-    </div>
-
-    <div id="instructions" class="hidden p-4">
-        <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
-        <h2 class="text-xl font-bold mb-4">Instructions</h2>
-        <p>Here you can add instructions on how to use the app or features.</p>
-    </div>
-
-    <div id="scanner" class="hidden p-4 flex flex-col items-center justify-center">
-        <button class="text-green-500 underline mb-4 self-start" onclick="showPage('menu')">Back to Menu</button>
-        <h2 class="text-xl font-bold mb-4">Scanner</h2>
-        <img src="assets/scanner-logo.png" alt="Scanner Logo" class="mb-6" style="width: 150px; height: 150px;">
-        <button class="bg-green-500 text-white px-6 py-2 rounded-lg text-lg">Scan</button>
-    </div>
-</div>
-</div>
 </body>
 </html>
