@@ -1,36 +1,39 @@
 /* General Styling */
 body {
-    max-width: 500px;
-    margin: 0 auto;
+    margin: 0;
     background-color: #f7f7f7;
     font-family: Arial, sans-serif;
 }
-/* Phone Border */
+
+/* Phone Border Styling */
 #phone-border {
-    position: relative;
-    width: 400px;
-    height: 800px;
-    background-image: url('assets/phone-border.png');
+    background: url('assets/phone-border.png') no-repeat center center;
     background-size: contain;
-    background-repeat: no-repeat;
-    margin: 20px auto;
+    position: relative;
+    max-width: 500px;
+    height: 100vh;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-/* App Content Inside the Phone Border */
+/* App content inside the phone border */
 #app-content {
     width: 90%;
-    height: 90%;
-    overflow: hidden;
-    position: relative;
+    max-width: 360px;
+    height: 700px;
+    margin: auto;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 20px;
 }
-
-/* Hide phone border on smaller screens */
+/* Change phone border for smaller screens */
 @media (max-width: 768px) {
     #phone-border {
-        display: none;
+        background: url('assets/phone-border-white.png') no-repeat center center;
+        background-size: contain;
     }
 }
 
@@ -38,46 +41,4 @@ body {
     width: 25%;
     margin: 0 auto;
     display: block;
-}
-
-/* Marketplace Styling */
-.marketplace-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #ffffff;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.item-details {
-    display: flex;
-    align-items: center;
-}
-
-.item-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.item-actions button {
-    margin-left: 5px;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.item-actions .bg-green-500 {
-    background-color: #38a169;
-    color: #fff;
-}
-
-.item-actions .bg-blue-500 {
-    background-color: #3182ce;
-    color: #fff;
 }
