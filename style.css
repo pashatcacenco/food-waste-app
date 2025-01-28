@@ -41,71 +41,51 @@ body {
 
 
 /* General table styling */
+/* General table styling */
 table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 16px; /* Default font size */
+    table-layout: fixed; /* Ensure columns adjust dynamically */
 }
 
-/* Responsive wrapper to enable flexing and wrapping */
-.responsive-table {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    overflow-x: auto; /* Allow horizontal scrolling for very narrow screens */
-}
-
-/* Table headers and cells styling */
 th, td {
-    padding: 10px;
+    padding: 10px; /* Adjust padding for better fit */
     text-align: left;
     border-bottom: 1px solid #ddd;
-    font-size: 16px;
-    word-wrap: break-word;
+    word-wrap: break-word; /* Wrap text within the cells */
 }
 
-/* Flex content inside table cells */
-td {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+/* Ensure the table container adjusts dynamically */
+.table-container {
+    max-width: 100%; /* Constrain to app content width */
+    overflow: hidden; /* Prevent overflow outside the container */
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for all screen sizes */
 @media (max-width: 768px) {
     table {
-        display: block;
+        font-size: 14px; /* Reduce font size for smaller screens */
     }
 
-    thead {
-        display: none; /* Hide headers for mobile */
+    th, td {
+        padding: 5px; /* Further reduce padding */
     }
 
-    tbody tr {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        padding: 10px;
-        background-color: #f9f9f9;
-    }
-
-    tbody td {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 8px 0;
-    }
-
-    tbody td:before {
-        content: attr(data-label);
-        font-weight: bold;
-        width: 50%; /* Adjust width of label */
+    th, td {
+        font-size: 12px; /* Smaller font size for tight spaces */
     }
 }
 
+/* Scale down the table content to fit app width */
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 95%; /* Always fit within 95% of the parent container */
+}
 
 .login-logo {
     width: 25%;
