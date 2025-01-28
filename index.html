@@ -49,24 +49,24 @@
 
             <!-- Fridge Page -->
             <div id="fridge" class="hidden p-4">
-                <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
-                <h2 class="text-xl font-bold mb-4">Your Fridge</h2>
-                <div class="table-container">
-                    <table class="table-auto w-full bg-white rounded-lg shadow">
-                        <thead>
-                            <tr>
-                                <th class="px-4 py-2">Product</th>
-                                <th class="px-4 py-2">Start Date</th>
-                                <th class="px-4 py-2">Expire Date</th>
-                                <th class="px-4 py-2">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody id="fridgeTable">
-                            <!-- Data will be populated dynamically -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+    <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
+    <h2 class="text-xl font-bold mb-4">Your Fridge</h2>
+    <div class="table-container overflow-x-auto">
+        <table class="table-auto w-full bg-white rounded-lg shadow">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Product</th>
+                    <th class="px-4 py-2">Start Date</th>
+                    <th class="px-4 py-2">Expire Date</th>
+                    <th class="px-4 py-2">Status</th>
+                </tr>
+            </thead>
+            <tbody id="fridgeTable">
+                <!-- Data will be populated dynamically -->
+            </tbody>
+        </table>
+    </div>
+</div>
 
             <!-- Other Pages -->
             <div id="recommendation" class="hidden p-4">
