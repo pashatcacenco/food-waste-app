@@ -5,6 +5,34 @@ body {
     background-color: #f7f7f7;
     font-family: Arial, sans-serif;
 }
+/* Phone Border */
+#phone-border {
+    position: relative;
+    width: 400px;
+    height: 800px;
+    background-image: url('assets/phone-border.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* App Content Inside the Phone Border */
+#app-content {
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hide phone border on smaller screens */
+@media (max-width: 768px) {
+    #phone-border {
+        display: none;
+    }
+}
 
 .login-logo {
     width: 25%;
