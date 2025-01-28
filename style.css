@@ -7,21 +7,22 @@ body {
 
 /* Phone Border Styling */
 #phone-border {
-    background: url('assets/phone-border.png') no-repeat center center;
-    background-size: contain;
     position: relative;
-    max-width: 500px;
-    height: 100vh;
-    margin: 0 auto;
+    width: 400px;
+    height: 800px;
+    background-image: url('assets/phone-border.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20px auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
+
 
 /* App content inside the phone border */
 #app-content {
-    width: 90%;
+    width: 85%;
     max-width: 360px;
     height: 700px;
     margin: auto;
