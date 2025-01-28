@@ -40,36 +40,72 @@ body {
 
 
 
-/* Make the table responsive */
-.table-container {
-    overflow-x: hidden; /* Ensure no horizontal scroll */
-}
-
+/* General table styling */
 table {
-    width: 100%; /* Ensure the table fits the container */
-    border-collapse: collapse; /* Avoid extra spacing between table cells */
+    width: 100%;
+    border-collapse: collapse;
 }
 
+/* Responsive wrapper to enable flexing and wrapping */
+.responsive-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling for very narrow screens */
+}
+
+/* Table headers and cells styling */
 th, td {
-    padding: 8px; /* Reduce padding */
-    text-align: left; /* Align text to the left */
-    font-size: 14px; /* Adjust font size for smaller screens */
-    word-wrap: break-word; /* Allow text to wrap if it's too long */
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    word-wrap: break-word;
 }
 
-/* Squeeze columns proportionally */
-th, td:nth-child(1) { width: 25%; } /* Product */
-th, td:nth-child(2) { width: 25%; } /* Start Date */
-th, td:nth-child(3) { width: 25%; } /* Expire Date */
-th, td:nth-child(4) { width: 25%; } /* Status */
+/* Flex content inside table cells */
+td {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
 
-/* Adjust layout for smaller screens */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    th, td {
-        font-size: 12px; /* Reduce font size further */
-        padding: 6px; /* Minimize padding */
+    table {
+        display: block;
+    }
+
+    thead {
+        display: none; /* Hide headers for mobile */
+    }
+
+    tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+    }
+
+    tbody td {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+    }
+
+    tbody td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        width: 50%; /* Adjust width of label */
     }
 }
+
 
 .login-logo {
     width: 25%;
