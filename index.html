@@ -47,49 +47,135 @@
                 </div>
             </div>
 
-            <!-- Fridge Page -->
-            <div id="fridge" class="hidden p-4">
-                <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
-                <h2 class="text-xl font-bold mb-4">Your Fridge</h2>
-                <div class="table-container">
-                    <table class="table-auto w-full bg-white rounded-lg shadow">
-                        <thead>
-                            <tr>
-                                <th class="px-4 py-2">Product</th>
-                                <th class="px-4 py-2">Start Date</th>
-                                <th class="px-4 py-2">Expire Date</th>
-                                <th class="px-4 py-2">Status</th>
-                            </tr>
-                        </thead>
-                        <tbody id="fridgeTable">
-                            <!-- Data will be populated dynamically -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+           <!-- Fridge Page -->
+<div id="fridge" class="hidden p-4">
+    <div class="flex justify-between items-center bg-green-500 text-white px-4 py-2 rounded-md mb-4">
+        <h2 class="text-lg font-bold">YOUR FRIDGE</h2>
+        <button onclick="showPage('menu')" class="text-white font-semibold">Home Page</button>
+    </div>
+    <div class="flex items-center bg-gray-100 p-2 rounded-lg mb-4 shadow-md">
+        <input 
+            type="text" 
+            id="search-bar" 
+            placeholder="Search..." 
+            class="w-full px-4 py-2 focus:outline-none"
+        >
+        <button class="ml-2">
+            <img src="assets/microphone-icon.png" alt="Microphone" class="w-6 h-6">
+        </button>
+    </div>
+    <div class="flex flex-col items-center">
+        <img src="assets/my_fridge.jpg" alt="Your Fridge" class="w-full max-w-sm mb-4 rounded-lg shadow-lg">
+        <p class="text-center text-lg text-gray-700">
+    </div>
+    <div class="flex justify-center mt-8">
+        <button onclick="showPage('menu')" class="text-green-500 underline text-lg">
+            Home Page
+        </button>
+    </div>
+</div>
 
             <!-- Other Pages -->
+            
             <div id="recommendation" class="hidden p-4">
-                <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
-                <h2 class="text-xl font-bold mb-4">Recommendations</h2>
+                <!-- Navigation Bar -->
+                   <!-- Navigation Bar -->
+    <div class="navigation-bar flex items-center">
+        <button class="back-button" onclick="showPage('menu')">
+            <span>&larr;</span>
+        </button>
+        <a href="javascript:void(0)" onclick="showPage('menu')" class="back-to-menu-link ml-2">Back to menu</a>
+
+                </div>
+                <h2 class="page-title bold-title centered-navigation">Recommendations</h2>
+            
+                <!-- Recommendation Image -->
                 <div class="recommendation-container">
                     <img src="assets/recommendations.jpg" alt="Recommendations" class="recommendation-image">
                 </div>
-            </div>
-
-            <div id="marketplace" class="hidden p-4">
-                <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
-                <h2 class="text-xl font-bold mb-4">Community Marketplace</h2>
-                <div id="marketplaceList">
-                    <!-- Data will be populated dynamically -->
+            
+                <!-- Home Page Link -->
+                <div class="centered-navigation">
+                    <a href="javascript:void(0)" class="home-page-link" onclick="showPage('menu')">Home Page</a>
                 </div>
             </div>
 
+   <!-- Community Market Service Section -->
+<div id="marketplace" class="hidden p-4">
+    <div class="navigation-bar flex items-center">
+        <button class="back-button" onclick="showPage('menu')">
+            <span>&larr;</span>
+        </button>
+        <a href="javascript:void(0)" onclick="showPage('menu')" class="back-to-menu-link ml-2">Back to menu</a>
+
+                </div>
+    <h2 class="text-xl font-bold mb-4 text-center">My Community</h2>
+    <div class="flex flex-col items-center">
+        <img src="assets/market.jpg" alt="Community Market" class="w-full max-w-sm mb-4 rounded-lg shadow-lg">
+    </div>
+    <div class="flex justify-around items-center mt-6">
+        <button class="footer-btn trade-btn" onclick="showPage('trade')">Trade</button>
+        <button class="footer-btn request-btn" onclick="showPage('request')">Request</button>
+    </div>
+    <div class="centered-navigation">
+        <a href="javascript:void(0)" class="home-page-link" onclick="showPage('menu')">Home Page</a>
+    </div>
+</div>
+
+<!-- Trade Page -->
+<div id="trade" class="hidden p-4">
+    <div class="navigation-bar flex items-center">
+        <button class="back-button" onclick="showPage('marketplace')">
+            <span>&larr;</span>
+        </button>
+        <a href="javascript:void(0)" onclick="showPage('marketplace')" class="back-to-menu-link ml-2">Back to menu</a>
+    </div>
+    <h2 class="text-xl font-bold mb-4 text-center">Trade</h2>
+    <div class="flex justify-center">
+        <img src="assets/trade.jpg" alt="Trade Item" class="trade-image">
+    </div>
+    <!-- <div class="text-center mt-6">
+        <button class="bg-green-500 text-white px-6 py-2 rounded-lg">TRADE ITEM</button>
+    </div> -->
+    <div class="centered-navigation mt-4">
+        <a href="javascript:void(0)" class="home-page-link" onclick="showPage('menu')">Home Page</a>
+    </div>
+</div>
+
+<!-- Request Page -->
+<div id="request" class="hidden p-4">
+    <div class="navigation-bar flex items-center">
+        <button class="back-button" onclick="showPage('marketplace')">
+            <span>&larr;</span>
+        </button>
+        <a href="javascript:void(0)" onclick="showPage('marketplace')" class="back-to-menu-link ml-2">Back to menu</a>
+    </div>
+    <h2 class="text-xl font-bold mb-4 text-center">Request</h2>
+    <div class="flex justify-center">
+        <img src="assets/request.jpg" alt="Request Item" class="request-image">
+    </div>
+    <!-- <div class="text-center mt-6">
+        <button class="bg-blue-500 text-white px-6 py-2 rounded-lg">REQUEST ITEM</button>
+    </div> -->
+    <div class="centered-navigation mt-4">
+        <a href="javascript:void(0)" class="home-page-link" onclick="showPage('menu')">Home Page</a>
+    </div>
+</div>
+<!-- Notification Page -->
             <div id="notifications" class="hidden p-4">
-                <button class="text-green-500 underline mb-4" onclick="showPage('menu')">Back to Menu</button>
-                <h2 class="text-xl font-bold mb-4">Notifications</h2>
+                <div class="navigation-bar flex items-center">
+                    <button class="back-button" onclick="showPage('menu')">
+                        <span>&larr;</span>
+                    </button>
+                    <a href="javascript:void(0)" onclick="showPage('menu')" class="back-to-menu-link ml-2">Back to menu</a>
+            
+                            </div>
+                            <h2 class="page-title bold-title centered-navigation">Notifications</h2>
                 <div class="notification-container">
                     <img src="assets/notifications.jpg" alt="Notifications" class="notification-image">
+                </div>
+                <div class="centered-navigation">
+                    <a href="javascript:void(0)" class="home-page-link" onclick="showPage('menu')">Home Page</a>
                 </div>
             </div>
 
@@ -99,12 +185,19 @@
                 <p>Here you can add instructions on how to use the app or features.</p>
             </div>
 
-            <div id="scanner" class="hidden p-4 flex flex-col items-center justify-center">
-                <button class="text-green-500 underline mb-4 self-start" onclick="showPage('menu')">Back to Menu</button>
-                <h2 class="text-xl font-bold mb-4">Scanner</h2>
-                <img src="assets/scanner-logo.png" alt="Scanner Logo" class="mb-6" style="width: 150px; height: 150px;">
-                <button class="bg-green-500 text-white px-6 py-2 rounded-lg text-lg">Scan</button>
-            </div>
+   <!-- Scanner Page -->
+<div id="scanner" class="hidden p-4 flex flex-col items-center justify-center">
+    <button class="text-green-500 underline mb-4 self-start" onclick="showPage('menu')">← Back to Menu</button>
+    <h2 class="text-xl font-bold mb-4">Scanner</h2>
+    <img src="assets/scanner-logo.png" alt="Scanner Logo" class="mb-6" style="width: 150px; height: 150px;">
+    <p class="text-center text-gray-700 mb-4">
+        Scan items with barcodes, and they will be automatically added to your fridge table.
+    </p>
+    <button class="bg-green-500 text-white px-6 py-2 rounded-lg text-lg">Scan</button>
+    <div class="centered-navigation mt-4">
+        <a href="javascript:void(0)" class="home-page-link" onclick="showPage('menu')">Home Page</a>
+    </div>
+</div>
         </div>
     </div>
 </body>
