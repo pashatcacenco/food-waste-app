@@ -19,10 +19,9 @@ body {
     align-items: center;
 }
 
-
 /* App content inside the phone border */
 #app-content {
-    width: 85%;
+    width: 90%;
     max-width: 360px;
     height: 700px;
     margin: auto;
@@ -38,57 +37,36 @@ body {
     }
 }
 
-
-
-/* General table styling */
-/* General table styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 16px; /* Default font size */
-    table-layout: fixed; /* Ensure columns adjust dynamically */
-}
-
-th, td {
-    padding: 10px; /* Adjust padding for better fit */
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    word-wrap: break-word; /* Wrap text within the cells */
-}
-
-/* Ensure the table container adjusts dynamically */
-.table-container {
-    max-width: 100%; /* Constrain to app content width */
-    overflow: hidden; /* Prevent overflow outside the container */
-}
-
-/* Responsive adjustments for all screen sizes */
-@media (max-width: 768px) {
-    table {
-        font-size: 14px; /* Reduce font size for smaller screens */
-    }
-
-    th, td {
-        padding: 5px; /* Further reduce padding */
-    }
-
-    th, td {
-        font-size: 12px; /* Smaller font size for tight spaces */
-    }
-}
-
-/* Scale down the table content to fit app width */
-.table-container {
-    display: flex;
-    justify-content: center;
-}
-
-table {
-    width: 95%; /* Always fit within 95% of the parent container */
-}
-
 .login-logo {
     width: 25%;
     margin: 0 auto;
     display: block;
+}
+
+.notification-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.notification-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recommendation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.recommendation-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
