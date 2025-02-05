@@ -35,7 +35,7 @@ function handleLogin(event) {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
-    if (username === "admin" && password === "password") {
+    if (username === "admin" && password === "loveDT") {
         alert("Login successful!");
         showPage("menu");
     } else {
